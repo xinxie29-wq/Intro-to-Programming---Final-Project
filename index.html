@@ -1,11 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoodTune Journal</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+
+<!-- header -->
+
+<header>
+  <h1 class="logo">MoodTune Journal</h1>
+  <p class="subtext">Track your mood, journal your feelings, relax with music.</p>
+</header>
+
+<!-- feeling + journal section -->
+ <section class="journal">
+  <form action="submit">
+  <div class="emojis">
+    <!-- can we add an active class just because? -->
+    <button class="emo-btn" id="happy-btn">Happy</button>
+    <button class="emo-btn" id="excited-btn">Excited</button>
+    <button class="emo-btn" id="calm-btn">Calm</button>
+    <button class="emo-btn" id='confident-btn'>Confident</button>
+    <button class="emo-btn" id="lonely-btn">Lonely</button>
+    <button class="emo-btn" id="sad-btn">Sad</button>
+    <button class="emo-btn" id="tird-btn">Tired</button>
+    <button class="emo-btn" id="anxious-btn">Anxious</button>
+    <button class="emo-btn" id="angry-btn">Angry</button>
+  </div>
+
+  <div class="journal-entry">
+    <input type="text" placeholder="Write about your day!">
+    <button id="journalBtn">Submit</button>
+  </div>
+  </form>
+ </section>
+<!-- Current Stress Level (if time)-->
+
+<!-- Music section -->
+<section class="music">
+  <h1>MUSIC!!! (placeholder, i'll put an image here for fancy text)</h1>
+
+<div class="recommend-music">
+  <h2 class="subtext">Music generated according to your mood.</h2>
+  <p>You should hear this...</p>
+  <div class="music-list">
+    <div class="card">
+      <!-- insert music stuff here -->
+    </div>
+  </div>
+</div>
+
+<div class="music-search">
+  <h3>OR...</h3>
+  <input type="text" placeholder="Search for a specific song...">
+  <button id="musicBtn">🔎 Search</button>
+  
+</div>
+</section>
+
+
+
+<!-- Saved playlists for different moods [if we have enough time] (?) -->
+
+<!-- history -->
+
+
+  <main>
+
+    <section class="music-card">
+      <h2>Your MoodTune</h2>
+      <p>Based on your mood, we recommend:</p>
+
+      <div class="song-box">
+        <h3>Song Title</h3>
+        <p>Artist Name</p>
+        <button>Play Preview</button>
+      </div>
+    </section>
+
+    <section class="entries-card">
+      <h2>Past Journal Entries</h2>
+
+      <div class="entry">
+        <h3>😊 Happy</h3>
+        <p class="date">December 2026</p>
+        <p>Today was a good day. I felt productive and relaxed.</p>
+      </div>
+
+      <div class="entry">
+        <h3>😌 Calm</h3>
+        <p class="date">December 2026</p>
+        <p>I spent time listening to music and relaxing.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made by Team MoodTune Journal</p>
+  </footer>
+
 </body>
 </html>
