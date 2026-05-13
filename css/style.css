@@ -2,11 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ font-family: "Faculty Glyphic", sans-serif;
 }
+
 
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #fff4df, #ffd8b5, #ffb199);
+  background: #f7f3ff;
   color: #3b2f2f;
   min-height: 100vh;
 }
@@ -16,18 +18,24 @@ body {
 header {
   text-align: center;
   padding: 40px 20px;
-  background-color: rgba(255, 248, 235, 0.85);
+  background-color: #7c3aed;
 }
 
 .logo {
 font-family: "DynaPuff", cursive;
   font-size: 2.7rem;
-  color: #b45309;
+  color: #f2ebfa;
   margin-bottom: 10px;
+  transition: transform 0.25s ease;
+
+}
+
+.logo:hover {
+  transform: scale(1.08);
 }
 
 .subtext {
-  color: #7c4a1e;
+  color: #d6a0f5;
   font-size: 1.1rem;
 }
 
@@ -50,7 +58,7 @@ font-family: "DynaPuff", cursive;
 
 section,
 .past-journal-sidebar {
-  background-color: #fff8eb;
+  background-color: #e8dcf9;
   padding: 25px;
   border-radius: 20px;
   box-shadow: 0 4px 14px rgba(120, 53, 15, 0.18);
@@ -69,6 +77,7 @@ h3 {
 .journal h2,
 .past-journal-sidebar h2 {
   margin-bottom: 18px;
+  text-align: center;
 }
 
 /* Past Journal Sidebar */
@@ -111,10 +120,37 @@ h3 {
   border-radius: 12px;
 }
 
+.history-toggle-btn {
+  display: none;
+}
+
+
 .journal-date {
   font-size: 0.9rem;
   color: #9b6b3d;
   margin: 6px 0;
+}
+
+/* Hover Effect */
+section,
+.past-journal-sidebar,
+.placeholder-card,
+.journal-history-card,
+.music-card,
+.recommend-music,
+.music-search {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+section:hover,
+.past-journal-sidebar:hover,
+.placeholder-card:hover,
+.journal-history-card:hover,
+.music-card:hover,
+.recommend-music:hover,
+.music-search:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(120, 53, 15, 0.25);
 }
 
 /* Mood Buttons */
@@ -193,9 +229,10 @@ h3 {
 
 /* Music Section */
 
-.music h1 {
+.music h2 {
   margin-bottom: 18px;
   color: #b45309;
+  text-align: center;
 }
 
 .recommend-music {
@@ -272,8 +309,7 @@ footer a:hover {
 
 /* Responsive Design */
 
-@media (max-width: 850px) {
-  .app-layout {
+@media (max-width: 850px) {  .app-layout {
     flex-direction: column;
   }
 
@@ -290,7 +326,31 @@ footer a:hover {
   #music-search-btn {
     width: 100%;
   }
+
+  .history-toggle-btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 999px;
+    background-color: #f97316;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .history-toggle-btn:hover {
+    background-color: #ea580c;
+  }
+
+  /* Hide past journal sidebar on mobile by default */
+  .past-journal-sidebar {
+    display: none;
+    width: 100%;
+    position: static;
 }
+}
+
 
 @media (max-width: 500px) {
   .logo {
@@ -309,4 +369,17 @@ footer a:hover {
   .mood-btn {
     width: 100%;
   }
+}
+
+:root {
+  --purple-dark: #4c1d95;
+  --purple-main: #7c3aed;
+  --purple-light: #a78bfa;
+  --purple-soft: #ede9fe;
+  --purple-bg: #f7f3ff;
+  --text-main: #1f1733;
+  --text-soft: #6b5a8e;
+  --white: #ffffff;
+  --border: #e7ddff;
+  --shadow: 0 16px 40px rgba(76, 29, 149, 0.12);
 }

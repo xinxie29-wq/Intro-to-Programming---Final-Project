@@ -5,24 +5,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MoodTune Journal</title>
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <!-- BOOTSTRAP -->
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Faculty+Glyphic&display=swap" rel="stylesheet">
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="JavaScript/script.js"></script>
 </head>
 
 <body>
 
   <!-- Header -->
   <header>
-    <h1 class="logo">MoodTune Journal</h1>
-    <p class="subtext">Track your mood, journal your feelings, relax with music.</p>
-  </header>
+  <h1 class="logo">MoodTune Journal</h1>
+  <p class="subtext">Track your mood, journal your feelings, relax with music.</p>
+
+  <button type="button" id="history-toggle-btn" class="history-toggle-btn">
+    View Past Journals
+  </button>
+</header>
 
   <main class="app-layout">
 
@@ -70,10 +81,10 @@
 
       <!-- Music Section -->
       <section class="music">
-        <h1>MUSIC!!!</h1>
+        <h2>MUSIC!!!</h2>
 
         <div class="recommend-music">
-          <h2 class="title" id="moodtune-title">Your MoodTune</h2>
+          <h3 class="title" id="moodtune-title">Your MoodTune</h3>
           <p class="subtext">Music generated according to your mood.</p>
           <p>You should listen to this...</p>
 
