@@ -16,6 +16,10 @@ const submitBtn = document.getElementById("journal-submit-btn")
 
 const searchBtn = document.getElementById("music-search-btn")
 
+const selectedMoodDisplay = document.getElementById("selected-mood-display");
+const selectedMoodEmoji = document.getElementById("selected-mood-emoji");
+const selectedMoodText = document.getElementById("selected-mood-text");
+const clearMoodBtn = document.getElementById("clear-mood-btn");
 
 // Music Section
 const musicList = document.querySelector(".music-list")
