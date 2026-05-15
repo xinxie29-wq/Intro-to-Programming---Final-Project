@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- font-family: "Faculty Glyphic", sans-serif;
+  font-family: "Faculty Glyphic", sans-serif;
 }
 
 
@@ -22,7 +22,7 @@ header {
 }
 
 .logo {
-font-family: "DynaPuff", cursive;
+  font-family: "DynaPuff", cursive;
   font-size: 2.7rem;
   color: #f9f3ff;
   margin-bottom: 10px;
@@ -41,7 +41,7 @@ font-family: "DynaPuff", cursive;
 }
 
 .subtext2 {
-    color: #3a2248;
+  color: #3a2248;
   font-size: 1.1rem;
 }
 
@@ -124,6 +124,16 @@ h3 {
   padding: 15px;
   border-left: 6px solid #8b00fd;
   border-radius: 12px;
+}
+.journal-history-card h3 {
+  color: #9a3412;
+  margin-bottom: 5px;
+}
+
+.journal-date {
+  font-size: 0.9rem;
+  color: #9b6b3d;
+  margin-bottom: 8px;
 }
 
 .history-toggle-btn {
@@ -316,7 +326,8 @@ footer a:hover {
 
 /* Responsive Design */
 
-@media (max-width: 850px) {  .app-layout {
+@media (max-width: 850px) {
+  .app-layout {
     flex-direction: column;
   }
 
@@ -332,6 +343,15 @@ footer a:hover {
 
   #music-search-btn {
     width: 100%;
+  }
+
+  .music-search-card {
+    margin-top: 20px;
+    min-height: 100px;
+    background-color: #f7f0ff;
+    border-radius: 14px;
+    padding: 18px;
+    border-left: 6px solid #9316f9;
   }
 
   .history-toggle-btn {
@@ -355,7 +375,7 @@ footer a:hover {
     display: none;
     width: 100%;
     position: static;
-}
+  }
 }
 
 
