@@ -1,3 +1,36 @@
+:root {
+
+  /* Backgrounds */
+  --main-bg: #e6cfff;
+  --card-bg: #f7f0ff;
+  --soft-card-bg: #f5d1ff;
+
+  /* Primary Colors */
+  --primary-purple: #9f52d2;
+  --dark-purple: #7930a9;
+  --bright-purple: #8000ff;
+  --accent-purple: #9316f9;
+
+  /* Buttons */
+  --button-color: #8046dd;
+  --button-hover: #6d12c8;
+
+  /* Text */
+  --text-light: #ffffff;
+  --text-dark: #29022d;
+  --text-muted: #d6a0f5;
+
+  /* Borders */
+  --border-purple: #8b16f9;
+
+  /* Effects */
+  --shadow-color: rgba(32, 8, 68, 0.25);
+
+}
+
+
+/* Global */
+
 * {
   margin: 0;
   padding: 0;
@@ -5,11 +38,9 @@
   font-family: "Faculty Glyphic", sans-serif;
 }
 
-
 body {
-  font-family: Arial, sans-serif;
-  background: #e6cfff;
-  color: #3b2f2f;
+  background: var(--main-bg);
+  color: var(--text-dark);
   min-height: 100vh;
 }
 
@@ -18,16 +49,15 @@ body {
 header {
   text-align: center;
   padding: 40px 20px;
-  background-color: #9f52d2;
+  background-color: var(--primary-purple);
 }
 
 .logo {
   font-family: "DynaPuff", cursive;
   font-size: 2.7rem;
-  color: #f9f3ff;
+  color: var(--text-light);
   margin-bottom: 10px;
   transition: transform 0.25s ease;
-
 }
 
 .logo:hover {
@@ -36,12 +66,12 @@ header {
 }
 
 .subtext {
-  color: #d6a0f5;
+  color: var(--text-muted);
   font-size: 1.1rem;
 }
 
 .subtext2 {
-  color: #3a2248;
+  color: var(--text-dark);
   font-size: 1.1rem;
 }
 
@@ -64,10 +94,10 @@ header {
 
 section,
 .past-journal-sidebar {
-  background-color: #6a219b;
+  background-color: var(--dark-purple);
   padding: 25px;
   border-radius: 20px;
-  box-shadow: 0 4px 14px rgba(120, 53, 15, 0.18);
+  box-shadow: 0 4px 14px var(--shadow-color);
 }
 
 section {
@@ -77,7 +107,7 @@ section {
 h1,
 h2,
 h3 {
-  color: #ffffff;
+  color: var(--text-light);
 }
 
 .journal h2,
@@ -95,17 +125,16 @@ h3 {
 }
 
 .past-journal-sidebar h2 {
-  text-align: center;
-  color: #daaafa;
+  color: var(--text-muted);
 }
 
 .placeholder-card {
-  background-color: #f5d1ff;
-  border: 2px dashed #3a0e5c;
+  background-color: var(--soft-card-bg);
+  border: 2px dashed var(--border-purple);
   border-radius: 15px;
   padding: 18px;
   text-align: center;
-  color: #8e44a9;
+  color: var(--dark-purple);
 }
 
 .placeholder-card p:first-child {
@@ -120,34 +149,32 @@ h3 {
 }
 
 .journal-history-card {
-  background-color: #efc6ff;
+  background-color: var(--soft-card-bg);
   padding: 15px;
-  border-left: 6px solid #8b00fd;
+  border-left: 6px solid var(--accent-purple);
   border-radius: 12px;
+  margin-bottom: 15px;
 }
+
 .journal-history-card h3 {
-  color: #9a3412;
+  color: var(--dark-purple);
   margin-bottom: 5px;
 }
 
 .journal-date {
   font-size: 0.9rem;
-  color: #9b6b3d;
-  margin-bottom: 8px;
+  color: var(--dark-purple);
+  margin: 6px 0;
 }
+
+/* History Toggle Button */
 
 .history-toggle-btn {
   display: none;
 }
 
-
-.journal-date {
-  font-size: 0.9rem;
-  color: #502684;
-  margin: 6px 0;
-}
-
 /* Hover Effect */
+
 section,
 .past-journal-sidebar,
 .placeholder-card,
@@ -166,7 +193,7 @@ section:hover,
 .recommend-music:hover,
 .music-search:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(32, 8, 68, 0.25);
+  box-shadow: 0 8px 20px var(--shadow-color);
 }
 
 /* Mood Buttons */
@@ -182,23 +209,57 @@ section:hover,
   border: none;
   padding: 12px 16px;
   border-radius: 999px;
-  background-color: #a556ea;
-  color: #fbf1ff;
+  background-color: var(--button-color);
+  color: var(--text-light);
   cursor: pointer;
   font-size: 0.95rem;
   transition: 0.2s;
 }
 
 .mood-btn:hover {
-  background-color: #8000ff;
-  color: white;
+  background-color: var(--bright-purple);
+  color: var(--text-light);
   transform: translateY(-2px);
 }
 
 .mood-btn.active {
-  background-color: #8000ff;
-  color: white;
-  box-shadow: 0 3px 8px rgba(69, 8, 109, 0.35);
+  background-color: var(--bright-purple);
+  color: var(--text-light);
+  box-shadow: 0 3px 8px var(--shadow-color);
+}
+
+/* Selected Mood Display */
+
+.selected-mood-display {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--soft-card-bg);
+  border: 2px solid var(--border-purple);
+  border-radius: 999px;
+  padding: 12px 16px;
+  color: var(--dark-purple);
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+#selected-mood-emoji {
+  font-size: 1.5rem;
+}
+
+#clear-mood-btn {
+  border: none;
+  background-color: var(--accent-purple);
+  color: var(--text-light);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#clear-mood-btn:hover {
+  background-color: var(--button-hover);
 }
 
 /* Journal Entry */
@@ -213,17 +274,17 @@ section:hover,
   width: 100%;
   min-height: 140px;
   padding: 15px;
-  border: 2px solid hwb(296 63% 2%);
+  border: 2px solid var(--border-purple);
   border-radius: 14px;
   resize: vertical;
   font-size: 1rem;
-  background-color: #fcfbfd;
-  color: #2f0230;
+  background-color: var(--card-bg);
+  color: var(--text-dark);
 }
 
 #journal-input:focus {
   outline: none;
-  border-color: #c800ff;
+  border-color: var(--bright-purple);
 }
 
 #journal-submit-btn,
@@ -231,8 +292,8 @@ section:hover,
   border: none;
   padding: 12px 18px;
   border-radius: 12px;
-  background-color: #8046dd;
-  color: white;
+  background-color: var(--button-color);
+  color: var(--text-light);
   cursor: pointer;
   font-size: 1rem;
   transition: 0.2s;
@@ -240,20 +301,20 @@ section:hover,
 
 #journal-submit-btn:hover,
 #music-search-btn:hover {
-  background-color: #6d12c8;
+  background-color: var(--button-hover);
 }
 
 /* Music Section */
 
 .music h2 {
   margin-bottom: 18px;
-  color: #f5e4ff;
+  color: var(--text-light);
   text-align: center;
   font-weight: bold;
 }
 
 .recommend-music {
-  background-color: #a173f0;
+  background-color: var(--primary-purple);
   padding: 20px;
   border-radius: 16px;
   margin-bottom: 20px;
@@ -269,34 +330,37 @@ section:hover,
 
 .music-card {
   min-height: 100px;
-  background-color: #f7f0ff;
+  background-color: var(--card-bg);
   border-radius: 14px;
   padding: 18px;
-  border-left: 6px solid #9316f9;
+  border-left: 6px solid var(--accent-purple);
+  color: var(--text-dark);
 }
 
 .music-search {
-  background-color: #c7a5ff;
+  background-color: var(--soft-card-bg);
   padding: 18px;
   border-radius: 16px;
 }
 
 .music-search h3 {
   margin-bottom: 12px;
+  color: var(--dark-purple);
 }
 
 #music-search-input {
   width: 70%;
   padding: 12px;
-  border: 2px solid #e5aafe;
+  border: 2px solid var(--border-purple);
   border-radius: 12px;
   font-size: 1rem;
-  background-color: #f7f0ff;
+  background-color: var(--card-bg);
+  color: var(--text-dark);
 }
 
 #music-search-input:focus {
   outline: none;
-  border-color: #9b3cfb;
+  border-color: var(--bright-purple);
 }
 
 /* Footer */
@@ -304,7 +368,7 @@ section:hover,
 hr {
   border: none;
   height: 1px;
-  background-color: rgba(23, 0, 32, 0.299);
+  background-color: var(--shadow-color);
   width: 90%;
   margin: 20px auto;
 }
@@ -312,16 +376,22 @@ hr {
 footer {
   text-align: center;
   padding: 20px;
-  color: #29022d;
+  color: var(--text-dark);
 }
 
 footer a {
-  color: #7f11c4;
+  color: var(--dark-purple);
   text-decoration: none;
 }
 
 footer a:hover {
   text-decoration: underline;
+}
+
+/* Utility */
+
+.hidden {
+  display: none;
 }
 
 /* Responsive Design */
@@ -332,8 +402,13 @@ footer a:hover {
   }
 
   .past-journal-sidebar {
+    display: none;
     width: 100%;
     position: static;
+  }
+
+  .past-journal-sidebar.show-history {
+    display: block;
   }
 
   #music-search-input {
@@ -348,10 +423,10 @@ footer a:hover {
   .music-search-card {
     margin-top: 20px;
     min-height: 100px;
-    background-color: #f7f0ff;
+    background-color: var(--card-bg);
     border-radius: 14px;
     padding: 18px;
-    border-left: 6px solid #9316f9;
+    border-left: 6px solid var(--accent-purple);
   }
 
   .history-toggle-btn {
@@ -360,61 +435,17 @@ footer a:hover {
     padding: 12px 18px;
     border: none;
     border-radius: 999px;
-    background-color: #ddb4ff;
-    color: white;
+    background-color: var(--button-color);
+    color: var(--text-light);
     font-size: 1rem;
     cursor: pointer;
+    transition: 0.2s;
   }
 
   .history-toggle-btn:hover {
-    background-color: #be97df;
-  }
-
-  /* Hide past journal sidebar on mobile by default */
-  .past-journal-sidebar {
-    display: none;
-    width: 100%;
-    position: static;
+    background-color: var(--button-hover);
   }
 }
-
-
-.selected-mood-display {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background-color: #fff1d6;
-  border: 2px solid #8b16f9;
-  border-radius: 999px;
-  padding: 12px 16px;
-  color: #d861ff;
-  font-weight: bold;
-  margin-bottom: 18px;
-}
-
-#selected-mood-emoji {
-  font-size: 1.5rem;
-}
-
-#clear-mood-btn {
-  border: none;
-  background-color: #8f16f9;
-  color: white;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-#clear-mood-btn:hover {
-  background-color: #ab0cea;
-}
-
-.hidden {
-  display: none;
-}
-
 
 @media (max-width: 500px) {
   .logo {
