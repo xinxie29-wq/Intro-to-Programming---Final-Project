@@ -12,6 +12,11 @@ const moodEmojis = {
   angry: "😠"
 };
 
+const moodText = moodBtn.forEach((btn) => {
+  btn.textContent
+})
+
+
 moodBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     const mood = btn.dataset.mood;
@@ -42,16 +47,16 @@ clearMoodBtn.addEventListener("click", () => {
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault()
 //Check if the input is empty
-  if (moodText === "" || journalText === "") {
+  if (moodText === "" || journalInput === "") {
     alert("Please choose a mood and write your journal.");
     return;
   }
 
   //store the new journal
    const newJournal = {
-    emoji: moodEmoji,
+    emoji: selectedMoodEmoji,
     mood: moodText,
-    text: journalText,
+    text: journalInput,
     date: new Date().toLocaleDateString()
   };
 
