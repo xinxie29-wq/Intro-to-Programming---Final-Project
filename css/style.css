@@ -363,6 +363,63 @@ section:hover,
   border-color: var(--bright-purple);
 }
 
+.music-search-card {
+  min-height: 100px;
+  background-color: #f7f0ff;
+  border-radius: 14px;
+  padding: 18px;
+  border-left: 6px solid #9316f9;
+  margin: 10px;
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s ease;
+  max-width: 200px; 
+}
+
+.music-search-card:hover {
+  transform: translateY(-6px);
+}
+
+.music-search-card h3 {
+  color: #29022d;
+  font-weight: 8px;
+  text-align: center;
+  font-size: 17px;
+}
+
+.music-search-card p {
+  font-size: 15px;
+}
+
+.music-search-card img {
+  justify-items: center;
+  border-radius: 10px;
+}
+
+#music-search-results {
+  padding: 10px 30px;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.desc {
+  border-radius: 3px;
+  border-color: #f5d1ff;
+  background-color: #d6a0f5;
+  color: #6d12c8;
+  padding: 3px;
+  transition: 0.2s ease;
+}
+
+.desc:hover {
+box-shadow:2px 2px 2px  #6d12c8;
+ 
+}
+
 /* Footer */
 
 hr {

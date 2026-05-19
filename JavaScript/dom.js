@@ -25,7 +25,7 @@ const emptyPlaceholder = document.getElementById("empty-placeholder");
 
 
 // Music Section
+const musicInput = document.querySelector("#music-search-input")
 const searchBtn = document.getElementById("music-search-btn")
-const musicList = document.querySelector(".music-list")
-const musicCard = document.querySelector(".music-card")
-const musicInput = document.getElementById("music-search-input")
+const searchResults = document.querySelector("#music-search-results")
+const status = document.querySelector(".status")
