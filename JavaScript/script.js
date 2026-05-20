@@ -97,6 +97,10 @@ function renderPastJournals() {
 
 }
 
+//Journal on phone
+historyBtn.addEventListener("click", (e)=>{
+  
+})
 
 //Music Section
 //Searching Music
