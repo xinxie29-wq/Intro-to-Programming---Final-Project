@@ -19,13 +19,15 @@ const clearMoodBtn = document.getElementById("clear-mood-btn");
 //Journal Section
 const journalInput = document.getElementById("journal-input")
 const submitBtn = document.getElementById("journal-submit-btn")
+const toast = document.getElementById("toast")
 
 //Journal History
 const pastJournalList = document.getElementById("past-journal-list");
 const emptyPlaceholder = document.getElementById("empty-placeholder");
-
+const clearJournalBtn = document.querySelectorAll(".clear-journal-btn")
 //Journal History on phone
 const historyBtn = document.getElementById("history-toggle-btn")
+const pastJournalSidebar = document.querySelector(".past-journal-sidebar")
 
 // Music Section
 const musicInput = document.querySelector("#music-search-input")

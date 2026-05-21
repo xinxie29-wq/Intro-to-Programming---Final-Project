@@ -58,7 +58,6 @@
       <!-- Feeling + Journal Section -->
       <section class="journal">
         <h2>How are you feeling today?</h2>
-
         <form id="journal-form">
           <div class="mood-buttons">
             <button type="button" class="mood-btn" id="happy-btn" data-mood="happy">Happy</button>
@@ -76,7 +75,7 @@
           <div id="selected-mood-display" class="selected-mood-display hidden">
             <span id="selected-mood-emoji" ></span>
             <span id="selected-mood-text"></span>
-            <button type="button" id="clear-mood-btn">×</button>
+            <button type="button" class="clear-mood-btn" id="clear-mood-btn">×</button>
           </div>
 
           <div class="journal-entry">
@@ -131,6 +130,7 @@
       <a href="#">Terms of Service</a>
     </p>
   </footer>
+<div id="toast" class="toast-message"></div>
 
 </body>
 

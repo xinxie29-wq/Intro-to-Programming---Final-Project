@@ -148,6 +148,49 @@ h3 {
   gap: 15px;
 }
 
+.toast-message {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: var(--button-color);
+  color: var(--text-light);
+  padding: 14px 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px var(--shadow-color);
+  z-index: 1000;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toast-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.clear-journal-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background-color: var(--accent-purple);
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.clear-journal-btn:hover {
+  background-color: var(--button-hover);
+}
+
+.journal-history-card {
+  position: relative;
+}
+
 .journal-history-card {
   background-color: var(--soft-card-bg);
   padding: 15px;
@@ -247,7 +290,7 @@ section:hover,
   font-size: 1.5rem;
 }
 
-#clear-mood-btn {
+#clear-mood-btn, #clear-journal-btn{
   border: none;
   background-color: var(--accent-purple);
   color: var(--text-light);
@@ -259,6 +302,10 @@ section:hover,
 }
 
 #clear-mood-btn:hover {
+  background-color: var(--button-hover);
+}
+
+#clear-journal-btn:hover {
   background-color: var(--button-hover);
 }
 
