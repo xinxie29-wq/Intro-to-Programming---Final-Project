@@ -375,6 +375,31 @@ section:hover,
   margin-top: 15px;
 }
 
+.music-list {
+  padding: 10px 30px;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+}
+
+.music-card {
+  min-height: 100px;
+  background-color: #7532c2;
+  border-radius: 14px;
+  padding: 18px;
+  border-left: 6px solid #9316f9;
+  margin: 10px;
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s ease
+}
+
+
+
 .music-card {
   min-height: 100px;
   background-color: var(--card-bg);
@@ -384,6 +409,17 @@ section:hover,
   color: var(--text-dark);
 }
 
+.music-card h3 {
+  color: #8046dd;
+}
+
+.music-logo {
+ width: 300px;
+ text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
 .music-search {
   background-color: var(--soft-card-bg);
   padding: 18px;
