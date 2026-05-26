@@ -413,13 +413,29 @@ section:hover,
   color: #8046dd;
 }
 
-.music-logo {
- width: 300px;
- text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+.main-content {
+  position: relative;
+  overflow: visible;
 }
+
+.music {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.music-logo {
+  width: 400px;
+  overflow: visible;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: -20px;  
+  z-index: 2;
+}
+
 .music-search {
   background-color: var(--soft-card-bg);
   padding: 18px;
