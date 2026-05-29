@@ -2,15 +2,12 @@
 
 // Selecting mood
 const moodEmojis = {
-  happy: "😊",
-  excited: "🤩",
-  calm: "😌",
-  confident: "😎",
-  lonely: "🥺",
-  sad: "😔",
-  tired: "😴",
-  anxious: "😰",
-  angry: "😠"
+  happy: "Helpies/Happy.png",
+  calm: "Helpies/Calm.png",
+  confident: "Helpies/Confident.png",
+  lonely: "Helpies/Lonely.png",
+  anxious: "Helpies/Anxious.png",
+  angry: "Helpies/Angry.png"
 }
 
 moodBtn.forEach((btn) => {
@@ -37,7 +34,8 @@ clearMoodBtn.addEventListener("click", () => {
     btn.classList.remove("active")
   })
 
-  selectedMoodEmoji.textContent = ""
+  selectedMoodEmoji.innerHTML = `
+  <img src="${moodEmojis[mood]}" alt="${mood}" class="mood-image">`
   selectedMoodText.textContent = ""
   selectedMoodDisplay.classList.add("hidden")
 })
