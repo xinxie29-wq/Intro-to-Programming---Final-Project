@@ -22,7 +22,7 @@ moodBtn.forEach((btn) => {
 
     btn.classList.add("active")
 
-    selectedMoodEmoji.textContent = moodEmojis[mood]
+    selectedMoodEmoji.innerHTML = `<img src="${moodEmojis[mood]}" alt="${mood}" class="mood-image">`
     selectedMoodText.textContent = moodText
     selectedMoodDisplay.classList.remove("hidden")
   })
@@ -34,8 +34,7 @@ clearMoodBtn.addEventListener("click", () => {
     btn.classList.remove("active")
   })
 
-  selectedMoodEmoji.innerHTML = `
-  <img src="${moodEmojis[mood]}" alt="${mood}" class="mood-image">`
+  selectedMoodEmoji.innerHTML = ""
   selectedMoodText.textContent = ""
   selectedMoodDisplay.classList.add("hidden")
 })
@@ -44,7 +43,7 @@ clearMoodBtn.addEventListener("click", () => {
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault()
 
-  const moodEmojiValue = selectedMoodEmoji.textContent
+  const moodImageValue = selectedMoodEmoji.querySelector("img").src
   const moodTextValue = selectedMoodText.textContent
   const journalTextValue = journalInput.value.trim()
 
@@ -55,12 +54,12 @@ submitBtn.addEventListener("click", (e) => {
   }
 
   const newJournal = {
-    id: Date.now(),
-    emoji: moodEmojiValue,
-    mood: moodTextValue,
-    text: journalTextValue,
-    date: new Date().toLocaleDateString()
-  }
+  id: Date.now(),
+  image: moodImageValue,
+  mood: moodTextValue,
+  text: journalTextValue,
+  date: new Date().toLocaleDateString()
+}
 
   const journals = JSON.parse(localStorage.getItem("journals")) || []
   journals.push(newJournal)
@@ -104,7 +103,10 @@ function renderPastJournals() {
     journalCard.classList.add("journal-history-card")
 
     journalCard.innerHTML = `
-      <h3>${journal.emoji} ${journal.mood}</h3>
+      <h3>
+  <img src="${journal.image}" alt="${journal.mood}" class="journal-mood-image">
+  ${journal.mood}
+</h3>
       <p class="journal-date">${journal.date}</p>
       <p>${journal.text}</p>
       <button type="button" class="clear-journal-btn" data-id="${journal.id}">×</button>

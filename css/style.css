@@ -290,6 +290,12 @@ section:hover,
   font-size: 1.5rem;
 }
 
+.mood-image,
+.journal-mood-image {
+  width: 80px;
+  height: auto;
+}
+
 #clear-mood-btn, #clear-journal-btn{
   border: none;
   background-color: var(--accent-purple);
