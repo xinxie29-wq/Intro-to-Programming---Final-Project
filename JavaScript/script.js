@@ -176,8 +176,9 @@ async function fetchSearchMusic() {
 
   try {
     const response = await fetch(
-      `https://discoveryprovider.audius.co/v1/tracks/search?query=${encodeURIComponent(userInput)}`
-    )
+      `https://discoveryprovider.audius.co/v1/tracks/search?query=${encodeURIComponent(userInput)}`,
+      {headers: {Authorization: 'd9TxycdlRJFV9jHaOYmGEpfpssxDMpCKfKSvbm5UUzo='}}
+    ) 
 
     if (!response.ok) {
       searchResults.innerHTML = `<p class="status">Sorry - something went wrong. Try again!</p>`
@@ -246,7 +247,6 @@ async function fetchMoodMusic() {
     musicList.innerHTML = ``
 
     for (const mood of emotionMap[selectedMoodText.textContent]) {
-        console.log(mood)
         const response = await fetch(`https://discoveryprovider.audius.co/v1/tracks/search?mood=${mood}`)
         const data = await response.json()
 
