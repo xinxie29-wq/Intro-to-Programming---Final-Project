@@ -257,7 +257,7 @@ async function fetchMoodMusic() {
             card.classList.add("music-card")
 
             card.innerHTML = `
-           <img src="${data.data[i].artwork?.["150x150"]}" alt="cover art">
+           <img src="${data.data[i].artwork?.["150x150"] || blank.webp}" alt="cover art">
            <h3>${data.data[i]?.title || "Unknown Name"}</h3>
            <p> <b>Artist:</b> ${data.data[i]?.artists || "Unknown Artist"}</p >
            <p> <b>Genre:</b> ${data.data[i]?.genre || "Not specified"}</p >
@@ -270,7 +270,7 @@ async function fetchMoodMusic() {
 
                 musicList.appendChild(card)
             }
-
+            
         }
         // 
     }
