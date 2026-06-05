@@ -10,6 +10,7 @@ const moodEmojis = {
   angry: "Helpies/Angry.png",
   excited:"Helpies/Excited.png",
   tired:"Helpies/Tired.png",
+  sad:"Helpies/Sad.png",
 }
 
 moodBtn.forEach((btn) => {
